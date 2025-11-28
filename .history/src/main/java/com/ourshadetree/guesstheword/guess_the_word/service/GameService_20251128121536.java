@@ -17,7 +17,6 @@ public class GameService {
 
     public GameService() {
         randomlyChosenWord = randomWords[random.nextInt(randomWords.length)];
-        System.out.println(randomlyChosenWord);
         allCharactersOfTheWord = new char[randomlyChosenWord.length()];
     }
     
@@ -30,9 +29,8 @@ public class GameService {
             if(c == '\u0000') {
                 ret = ret + "_";
             }
-            ret = ret + " ";
         }
 
-        return ret;
+        return "";
     }
 }

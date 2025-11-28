@@ -11,13 +11,12 @@ public class GameService {
 
     private String[] randomWords = {"father", "mother", "sister", "string", "hello", "light", "java"};
 
-    private char[] allCharactersOfTheWord;
+    private char[] allCharactersOfTheWord = null;
 
     Random random = new Random();
 
     public GameService() {
         randomlyChosenWord = randomWords[random.nextInt(randomWords.length)];
-        System.out.println(randomlyChosenWord);
         allCharactersOfTheWord = new char[randomlyChosenWord.length()];
     }
     
@@ -26,13 +25,6 @@ public class GameService {
 
         String ret = "";
 
-        for(char c: allCharactersOfTheWord) {
-            if(c == '\u0000') {
-                ret = ret + "_";
-            }
-            ret = ret + " ";
-        }
-
-        return ret;
+        return "";
     }
 }
